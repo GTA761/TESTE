@@ -6,7 +6,7 @@ from streamlit import title
 # Comando para configurar o layout da pagina
 st.set_page_config(layout="wide")
 
-df = pd.read_csv('RMA.CSV', delimiter=';', encoding = "ISO-8859-1")
+df = pd.read_csv('RMA.csv', delimiter=';', encoding = "ISO-8859-1")
 
 df["DATA"] = pd.to_datetime(df["DATA"])
 df = df.sort_values("DATA")
